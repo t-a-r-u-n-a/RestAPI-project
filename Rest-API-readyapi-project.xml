@@ -1,0 +1,1093 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="68b25fc7-d417-480d-9b4f-5248ac2609de" created="3.57.0" activeEnvironment="Default environment" encryptionMode="Not encrypted" name="Rest API" resourceRoot="" projectVersion="" updated="3.57.0 2024-12-10T10:59:20Z" xmlns:con="http://eviware.com/soapui/config">
+  <con:description>Rest API</con:description>
+  <con:settings/>
+  <con:interface xsi:type="con:RestService" id="2361a6c2-0a9f-442e-955a-182b4869a6e5" wadlVersion="http://wadl.dev.java.net/2009/02" name="https://api.restful-api.dev" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings id="c3bfe4bf-aa7e-4430-928b-877dadfd6a7f"/>
+    <con:definitionCache type="TEXT" rootPart=""/>
+    <con:endpoints>
+      <con:endpoint>https://api.restful-api.dev</con:endpoint>
+    </con:endpoints>
+    <con:resource name="Objects" path="" id="30be284a-2321-418f-82c9-dfc75a0d5a18">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Get all Objects" id="68a8cb7c-4c10-45c9-92c8-4e6ef4211b01" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>Response</con:element>
+        </con:representation>
+        <con:request name="Request 1" id="f5a307df-3e64-429b-aa95-9266679cd828" mediaType="application/json">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>https://api.restful-api.dev/objects</con:endpoint>
+          <con:request/>
+          <con:originalUri>https://api.restful-api.dev/objects</con:originalUri>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+      <con:method name="Add new object" id="a33f754e-b124-4e39-a56c-2aecc855ae84" method="POST">
+        <con:settings/>
+        <con:parameters>
+          <con:parameter required="true">
+            <con:name>Content-Type</con:name>
+            <con:value/>
+            <con:style>QUERY</con:style>
+            <con:default/>
+          </con:parameter>
+          <con:parameter required="true">
+            <con:name>name</con:name>
+            <con:value/>
+            <con:style>TEMPLATE</con:style>
+            <con:default/>
+          </con:parameter>
+          <con:parameter required="true">
+            <con:name>color</con:name>
+            <con:value/>
+            <con:style>TEMPLATE</con:style>
+            <con:default/>
+          </con:parameter>
+          <con:parameter required="true">
+            <con:name>capacity</con:name>
+            <con:value/>
+            <con:style>TEMPLATE</con:style>
+            <con:default/>
+          </con:parameter>
+          <con:parameter required="true">
+            <con:name>year</con:name>
+            <con:value/>
+            <con:style>TEMPLATE</con:style>
+            <con:default/>
+          </con:parameter>
+          <con:parameter required="true">
+            <con:name>price</con:name>
+            <con:value/>
+            <con:style>TEMPLATE</con:style>
+            <con:default/>
+          </con:parameter>
+          <con:parameter required="true">
+            <con:name>CPU model</con:name>
+            <con:value/>
+            <con:style>TEMPLATE</con:style>
+            <con:default/>
+          </con:parameter>
+          <con:parameter required="true">
+            <con:name>Hard disk size</con:name>
+            <con:value/>
+            <con:style>TEMPLATE</con:style>
+            <con:default/>
+          </con:parameter>
+          <con:parameter required="true">
+            <con:name>id</con:name>
+            <con:value/>
+            <con:style>TEMPLATE</con:style>
+            <con:default/>
+          </con:parameter>
+        </con:parameters>
+        <con:representation type="FAULT">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>400 415</con:status>
+          <con:params/>
+          <con:element xmlns:obj="https://api.restful-api.dev/objects">obj:Fault</con:element>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/x-www-form-urlencoded</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>multipart/mixed</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element xmlns:obj="https://api.restful-api.dev/objects">obj:Response</con:element>
+        </con:representation>
+        <con:request name="Request 1" id="2d8d6dbd-2550-4442-b7e4-dfa01a4e9ad9" mediaType="application/json" postQueryString="false">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>https://api.restful-api.dev/objects</con:endpoint>
+          <con:request> {
+      "id" : "7",
+      "name" : "Apple MacBook Pro 16",
+      "data" : {
+         "year" : 2019,
+         "price" : 1849.99,
+         "CPU model" : "Intel Core i9",
+         "Hard disk size" : "1 TB"
+      }
+   }</con:request>
+          <con:originalUri>https://api.restful-api.dev/objects</con:originalUri>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters>
+            <con:entry key="Content-Type" value="application/json"/>
+          </con:parameters>
+          <con:parameterOrder>
+            <con:entry>Content-Type</con:entry>
+            <con:entry>name</con:entry>
+            <con:entry>color</con:entry>
+            <con:entry>capacity</con:entry>
+            <con:entry>year</con:entry>
+            <con:entry>price</con:entry>
+            <con:entry>CPU model</con:entry>
+            <con:entry>Hard disk size</con:entry>
+            <con:entry>id</con:entry>
+          </con:parameterOrder>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="Added Object []" path="/objects/ff808181932badb60193ee9acc3816df" id="cd462040-ee80-443d-a808-a091d7a22b51">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Get" id="ed9a8626-3e8d-463b-be6f-b77aa7c98084" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element xmlns:ff8="https://api.restful-api.dev/objects/ff808181932badb60193ee0a78851674">ff8:Response</con:element>
+        </con:representation>
+        <con:request name="Request 1" id="a74535f1-cfde-423b-9751-55252671fcc4" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>https://api.restful-api.dev</con:endpoint>
+          <con:request/>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+      <con:method name="Update" id="77d5fa14-6f09-47d9-936f-322d3bab2000" method="PUT">
+        <con:settings/>
+        <con:parameters>
+          <con:parameter required="true">
+            <con:name>Content-Type</con:name>
+            <con:value/>
+            <con:style>QUERY</con:style>
+            <con:default/>
+          </con:parameter>
+          <con:parameter required="true">
+            <con:name>id</con:name>
+            <con:value/>
+            <con:style>TEMPLATE</con:style>
+            <con:default/>
+          </con:parameter>
+          <con:parameter required="true">
+            <con:name>name</con:name>
+            <con:value/>
+            <con:style>TEMPLATE</con:style>
+            <con:default/>
+          </con:parameter>
+          <con:parameter required="true">
+            <con:name>year</con:name>
+            <con:value/>
+            <con:style>TEMPLATE</con:style>
+            <con:default/>
+          </con:parameter>
+          <con:parameter required="true">
+            <con:name>price</con:name>
+            <con:value/>
+            <con:style>TEMPLATE</con:style>
+            <con:default/>
+          </con:parameter>
+          <con:parameter required="true">
+            <con:name>CPU model</con:name>
+            <con:value/>
+            <con:style>TEMPLATE</con:style>
+            <con:default/>
+          </con:parameter>
+          <con:parameter required="true">
+            <con:name>Hard disk size</con:name>
+            <con:value/>
+            <con:style>TEMPLATE</con:style>
+            <con:default/>
+          </con:parameter>
+          <con:parameter required="true">
+            <con:name>color</con:name>
+            <con:value/>
+            <con:style>TEMPLATE</con:style>
+            <con:default/>
+          </con:parameter>
+        </con:parameters>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element xmlns:ff8="https://api.restful-api.dev/objects/ff808181932badb60193ee0a78851674">ff8:Response</con:element>
+        </con:representation>
+        <con:request name="Request 1" id="75f6a197-1c26-400e-bbe2-2a4cc68a318e" mediaType="application/json" postQueryString="false">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>https://api.restful-api.dev</con:endpoint>
+          <con:request>{
+   "id": "ff808181932badb60193ee0a78851674",
+   "name": "New Apple MacBook Pro 16",
+   "data": {
+      "year": 2024,
+      "price": 2999.99,
+      "CPU model": "Intel Core i9",
+      "Hard disk size": "1 TB",
+      "color": "silver"
+   },
+   "updatedAt": "2022-12-25T21:08:41.986Z"
+}</con:request>
+          <con:originalUri>https://api.restful-api.dev/objects/ff808181932badb60193ee0a78851674</con:originalUri>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters>
+            <con:entry key="Content-Type" value="application/json"/>
+          </con:parameters>
+          <con:parameterOrder>
+            <con:entry>Content-Type</con:entry>
+            <con:entry>id</con:entry>
+            <con:entry>name</con:entry>
+            <con:entry>year</con:entry>
+            <con:entry>price</con:entry>
+            <con:entry>CPU model</con:entry>
+            <con:entry>Hard disk size</con:entry>
+            <con:entry>color</con:entry>
+          </con:parameterOrder>
+        </con:request>
+      </con:method>
+      <con:method name="Delete" id="cd67bd3b-c6e7-4b65-aa66-88a45e62afbd" method="DELETE">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element xmlns:ff8="https://api.restful-api.dev/objects/ff808181932badb60193ee0a78851674">ff8:Response</con:element>
+        </con:representation>
+        <con:request name="Request 1" id="008d31e4-20c2-4395-9f18-9e02e75629a4" mediaType="application/json" postQueryString="false">
+          <con:settings/>
+          <con:endpoint>https://api.restful-api.dev</con:endpoint>
+          <con:request/>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+  </con:interface>
+  <con:testSuite id="9b3c97d5-aaf3-468c-ac9e-fd5c85ae4068" name="RESTful API Automation">
+    <con:settings id="ef067b4d-cdec-4460-ad14-3db3bc09ca8f"/>
+    <con:runType>SEQUENTIAL</con:runType>
+    <con:testCase id="f26eb433-3367-4004-b8d6-6b6b7c02672e" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Test Case 1" searchProperties="true" timeout="0">
+      <con:settings>
+        <con:setting id="IncludeOverview">true</con:setting>
+        <con:setting id="IncludeResults">true</con:setting>
+        <con:setting id="FlowLayout">false</con:setting>
+        <con:setting id="ErrorDetails">true</con:setting>
+        <con:setting id="IncludeCoverage">true</con:setting>
+      </con:settings>
+      <con:testStep type="datasource" name="Data Source" id="e940fbe2-ad00-45a1-bf48-d04d14ce1921">
+        <con:settings/>
+        <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:dataSource type="Excel">
+            <con:configuration>
+              <file>C:/Users/gaura/Taruna/REST API/TestData.xlsx</file>
+              <worksheet>Sheet1</worksheet>
+              <cell>A2</cell>
+              <ignoreEmpty>false</ignoreEmpty>
+              <evaluateFormulas>false</evaluateFormulas>
+            </con:configuration>
+          </con:dataSource>
+          <con:shared>true</con:shared>
+          <con:restartShared>true</con:restartShared>
+          <con:preload>true</con:preload>
+          <con:property>record</con:property>
+          <con:property>id</con:property>
+          <con:property>name</con:property>
+          <con:property>data</con:property>
+          <con:property>color</con:property>
+          <con:property>capacity</con:property>
+          <con:property>capacity GB</con:property>
+          <con:property>price</con:property>
+          <con:property>generation</con:property>
+          <con:property>year</con:property>
+          <con:property>CPU model</con:property>
+          <con:property>Hard disk size</con:property>
+          <con:property>Strap Colour</con:property>
+          <con:property>Case Size</con:property>
+          <con:property>Color</con:property>
+          <con:property>Description</con:property>
+          <con:property>Capacity</con:property>
+          <con:property>Screen size</con:property>
+          <con:property>Generation</con:property>
+          <con:property>Price</con:property>
+          <con:startRow/>
+          <con:endRow/>
+          <con:recordsPerIteration>1</con:recordsPerIteration>
+          <con:completeLastOperation>true</con:completeLastOperation>
+          <con:trimValues>false</con:trimValues>
+          <con:entitizeValues>false</con:entitizeValues>
+          <con:restartOnRun>true</con:restartOnRun>
+          <con:expandProperties>false</con:expandProperties>
+          <con:stopDatasourceExhausted>false</con:stopDatasourceExhausted>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="REST Request" id="9c655fb7-c4fe-4011-95dc-f9062ff80fd1">
+        <con:settings/>
+        <con:config service="https://api.restful-api.dev" resourcePath="" methodName="Add new object" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="REST Request" id="2d8d6dbd-2550-4442-b7e4-dfa01a4e9ad9" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+              <con:setting id="com.eviware.soapui.support.editor.views.xml.form2.FormEditorView@ViewType">Data</con:setting>
+            </con:settings>
+            <con:endpoint>https://api.restful-api.dev/objects</con:endpoint>
+            <con:request>{\r
+   "id" : "${Data Source#id}",\r
+   "name" : "${Data Source#name}",\r
+   "data" : {\r
+      "year" : "${Data Source#year}",\r
+      "price" : "${Data Source#price}",\r
+      "CPU model" : "${Data Source#CPU model}",\r
+      "Hard disk size" : "${Data Source#Hard disk size}"\r
+   }\r
+}</con:request>
+            <con:originalUri>https://api.restful-api.dev/objects</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="48c7bcf9-f8b5-43a2-8c9b-7af7675cab19" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters>
+              <con:entry key="color" value="${Data Source#color}"/>
+              <con:entry key="year" value="${Data Source#year}"/>
+              <con:entry key="CPU model" value="${Data Source#CPU model}"/>
+              <con:entry key="price" value="${Data Source#price}"/>
+              <con:entry key="Hard disk size" value="${Data Source#Hard disk size}"/>
+              <con:entry key="name" value="${Data Source#name}"/>
+              <con:entry key="id" value="${Data Source#id}"/>
+              <con:entry key="capacity" value="${Data Source#capacity}"/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>Content-Type</con:entry>
+              <con:entry>id</con:entry>
+              <con:entry>name</con:entry>
+              <con:entry>color</con:entry>
+              <con:entry>capacity</con:entry>
+              <con:entry>year</con:entry>
+              <con:entry>price</con:entry>
+              <con:entry>CPU model</con:entry>
+              <con:entry>Hard disk size</con:entry>
+            </con:parameterOrder>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="datasourceloop" name="Data Source Loop" id="449b0f37-ef53-42a1-9240-163464b061b9">
+        <con:settings/>
+        <con:config>
+          <dataSourceStep>Data Source</dataSourceStep>
+          <targetStep>REST Request</targetStep>
+          <discardResults>false</discardResults>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="assertionteststep" name="Assertion" id="32daecaa-23ba-46e7-9c63-e0c20762a341">
+        <con:settings/>
+        <con:config xsi:type="con:AssertionTestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:entry>
+            <con:id>292f6067-e1ec-4ae7-af4d-0969e316791c</con:id>
+            <con:isGroup>false</con:isGroup>
+            <con:sourceId>9c655fb7-c4fe-4011-95dc-f9062ff80fd1</con:sourceId>
+            <con:propertyName>Response</con:propertyName>
+            <con:assertion type="GroovyScriptAssertion" name="id field" id="a74a377f-9a90-402a-83ed-e77d29d2315a">
+              <con:configuration>
+                <scriptText>// Id not null
+def jsonResponse = new groovy.json.JsonSlurper().parseText(messageExchange.responseContent)
+
+if (!jsonResponse.id || jsonResponse.id.toString().trim().isEmpty()) {
+    throw new AssertionError("The 'id' field is empty.")
+} else {
+    log.info("The 'id' field is ${jsonResponse.id}")
+}
+
+
+</scriptText>
+              </con:configuration>
+            </con:assertion>
+          </con:entry>
+          <con:entry>
+            <con:id>2c097fcb-ba68-41a4-a830-340abfe34564</con:id>
+            <con:isGroup>false</con:isGroup>
+            <con:sourceId>9c655fb7-c4fe-4011-95dc-f9062ff80fd1</con:sourceId>
+            <con:propertyName>Response</con:propertyName>
+            <con:assertion type="GroovyScriptAssertion" name="name field" id="56d534d9-b473-4c1d-b41d-aae289bd33ae">
+              <con:configuration>
+                <scriptText>// name field
+def inputName = context.expand('${#Test Case 1#name}')
+
+def jsonResponse = new groovy.json.JsonSlurper().parseText(messageExchange.responseContent)
+def responseName = jsonResponse.name
+
+if (inputName != responseName) {
+    log.warn("Response name is incorrect. Expected: ${inputName}, Found: ${responseName}")
+}</scriptText>
+              </con:configuration>
+            </con:assertion>
+          </con:entry>
+          <con:entry>
+            <con:id>05fd1955-e7ee-4c44-8795-ada85ff2e770</con:id>
+            <con:isGroup>false</con:isGroup>
+            <con:sourceId>9c655fb7-c4fe-4011-95dc-f9062ff80fd1</con:sourceId>
+            <con:propertyName>Response</con:propertyName>
+            <con:assertion type="GroovyScriptAssertion" name="year field" id="30ca9016-3f25-48ce-9226-0dc10f1949ae">
+              <con:configuration>
+                <scriptText>// year field
+def inputYear = context.expand('${#Test Case 1#year}')
+
+def jsonResponse = new groovy.json.JsonSlurper().parseText(messageExchange.responseContent)
+def responseYear = jsonResponse.year
+
+if (inputYear != responseYear) {
+    log.warn("Response year is incorrect. Expected: ${inputYear}, Found: ${responseYear}")
+}</scriptText>
+              </con:configuration>
+            </con:assertion>
+          </con:entry>
+          <con:entry>
+            <con:id>29a9f22f-9bfa-4cb4-be55-f3ccd49d63eb</con:id>
+            <con:isGroup>false</con:isGroup>
+            <con:sourceId>9c655fb7-c4fe-4011-95dc-f9062ff80fd1</con:sourceId>
+            <con:propertyName>Response</con:propertyName>
+            <con:assertion type="GroovyScriptAssertion" name="price field" id="6786a444-edbe-4d1c-acc0-c29dfc14cd65">
+              <con:configuration>
+                <scriptText>// price field
+def inputPrice = context.expand('${#Test Case 1#price}')
+
+def jsonResponse = new groovy.json.JsonSlurper().parseText(messageExchange.responseContent)
+def responsePrice = jsonResponse.price
+
+if (inputPrice != responsePrice) {
+    log.warn("Response name is incorrect. Expected: ${inputPrice}, Found: ${responsePrice}")
+}</scriptText>
+              </con:configuration>
+            </con:assertion>
+          </con:entry>
+          <con:entry>
+            <con:id>a5fa430c-b543-4d43-9ee8-ac8d78d81f8e</con:id>
+            <con:isGroup>false</con:isGroup>
+            <con:sourceId>9c655fb7-c4fe-4011-95dc-f9062ff80fd1</con:sourceId>
+            <con:propertyName>Response</con:propertyName>
+            <con:assertion type="GroovyScriptAssertion" name="CPU model" id="ba39b9f2-0a07-43c5-8dac-9b7df7b3c0e7">
+              <con:configuration>
+                <scriptText>// CPUmodel field
+def inputCPUmodel = context.expand('${#Test Case 1#CPU model}')
+
+def jsonResponse = new groovy.json.JsonSlurper().parseText(messageExchange.responseContent)
+def responseCPUmodel = jsonResponse.CPUmodel
+
+if (inputCPUmodel != responseCPUmodel) {
+    log.warn("Response CPUmodel is incorrect. Expected: ${inputCPUmodel}, Found: ${responseCPUmodel}")
+}</scriptText>
+              </con:configuration>
+            </con:assertion>
+          </con:entry>
+          <con:entry>
+            <con:id>7a7c945a-ff76-40ef-b8d9-ec7d75e353f9</con:id>
+            <con:isGroup>false</con:isGroup>
+            <con:sourceId>9c655fb7-c4fe-4011-95dc-f9062ff80fd1</con:sourceId>
+            <con:propertyName>Response</con:propertyName>
+            <con:assertion type="GroovyScriptAssertion" name="Hard Disk Size" id="ec0c836f-7d5c-44dc-aa32-59d354700744">
+              <con:configuration>
+                <scriptText>// HardDiskSize field
+def inputHardDiskSize = context.expand('${#Test Case 1#Hard disk size}')
+
+def jsonResponse = new groovy.json.JsonSlurper().parseText(messageExchange.responseContent)
+def responseHardDiskSize = jsonResponse.data["Hard disk size"]
+
+if (inputHardDiskSize != responseHardDiskSize) {
+    log.warn("Response HardDiskSize is incorrect. Expected: ${inputHardDiskSize}, Found: ${responseHardDiskSize}")
+}</scriptText>
+              </con:configuration>
+            </con:assertion>
+          </con:entry>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+      <con:breakPoints>
+        <con:testStepId>e940fbe2-ad00-45a1-bf48-d04d14ce1921</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>9c655fb7-c4fe-4011-95dc-f9062ff80fd1</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>449b0f37-ef53-42a1-9240-163464b061b9</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+    </con:testCase>
+    <con:testCase id="7a0a1886-6844-4e76-bae2-e7d4bf4c5794" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Test Case 2" searchProperties="true" timeout="0">
+      <con:settings/>
+      <con:testStep type="restrequest" name="REST Request" id="014967da-c191-4ee6-ab25-e607069e2f32">
+        <con:settings/>
+        <con:config service="https://api.restful-api.dev" resourcePath="/objects/ff808181932badb60193ee9acc3816df" methodName="Get" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="REST Request" id="a74535f1-cfde-423b-9751-55252671fcc4" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://api.restful-api.dev</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://api.restful-api.dev/objects/ff808181932badb60193ee0a78851674</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="29aa7d10-fcb3-420a-b6de-7de0a5c80330" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="assertionteststep" name="Assertion" id="8564d196-610f-48b1-a8b1-6fbc124bde13">
+        <con:settings/>
+        <con:config xsi:type="con:AssertionTestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:entry>
+            <con:id>3098d2db-70e6-491c-95ad-648b744b88f6</con:id>
+            <con:isGroup>false</con:isGroup>
+            <con:sourceId>014967da-c191-4ee6-ab25-e607069e2f32</con:sourceId>
+            <con:propertyName>Response</con:propertyName>
+            <con:assertion type="GroovyScriptAssertion" name="id" id="31bf5031-321d-44c0-8dc9-fe30db8bce95">
+              <con:configuration>
+                <scriptText>// Id field
+def inputId = context.expand('${#Test Case 2#id}')
+
+def jsonResponse = new groovy.json.JsonSlurper().parseText(messageExchange.responseContent)
+def responseId = jsonResponse.id
+
+if (inputId != responseId) {
+    log.warn("Response Id is incorrect. Expected: ${inputId}, Found: ${responseId}")
+}</scriptText>
+              </con:configuration>
+            </con:assertion>
+          </con:entry>
+          <con:entry>
+            <con:id>ef98db33-569b-4e15-990e-3005db3c3e05</con:id>
+            <con:isGroup>false</con:isGroup>
+            <con:sourceId>014967da-c191-4ee6-ab25-e607069e2f32</con:sourceId>
+            <con:propertyName>Response</con:propertyName>
+            <con:assertion type="GroovyScriptAssertion" name="name" id="fa9bd714-e6b3-4bd7-a611-28c967d5d9df">
+              <con:configuration>
+                <scriptText>// name field
+def inputName = context.expand('${#Test Case 2#name}')
+
+def jsonResponse = new groovy.json.JsonSlurper().parseText(messageExchange.responseContent)
+def responseName = jsonResponse.name
+
+if (inputName != responseName) {
+    log.warn("Response name is incorrect. Expected: ${inputName}, Found: ${responseName}")
+}</scriptText>
+              </con:configuration>
+            </con:assertion>
+          </con:entry>
+          <con:entry>
+            <con:id>232bcced-55ad-41fe-a39d-e2b7a25cc2e5</con:id>
+            <con:isGroup>false</con:isGroup>
+            <con:sourceId>014967da-c191-4ee6-ab25-e607069e2f32</con:sourceId>
+            <con:propertyName>Response</con:propertyName>
+            <con:assertion type="GroovyScriptAssertion" name="year" id="5b46b4d0-fd47-4d94-8f75-a9f0505f3866">
+              <con:configuration>
+                <scriptText>// year field
+def inputYear = context.expand('${#Test Case 2#year}')
+
+def jsonResponse = new groovy.json.JsonSlurper().parseText(messageExchange.responseContent)
+def responseYear = jsonResponse.year
+
+if (inputYear != responseYear) {
+    log.warn("Response year is incorrect. Expected: ${inputYear}, Found: ${responseYear}")
+}</scriptText>
+              </con:configuration>
+            </con:assertion>
+          </con:entry>
+          <con:entry>
+            <con:id>3989e8ac-2e14-483d-a373-f6ca09e5ae19</con:id>
+            <con:isGroup>false</con:isGroup>
+            <con:sourceId>014967da-c191-4ee6-ab25-e607069e2f32</con:sourceId>
+            <con:propertyName>Response</con:propertyName>
+            <con:assertion type="GroovyScriptAssertion" name="price" id="ba5c4a84-f2b7-4b3f-ab79-8d8c0b7833e7">
+              <con:configuration>
+                <scriptText>// price field
+def inputPrice = context.expand('${#Test Case 2#price}')
+
+def jsonResponse = new groovy.json.JsonSlurper().parseText(messageExchange.responseContent)
+def responsePrice = jsonResponse.price
+
+if (inputPrice != responsePrice) {
+    log.warn("Response name is incorrect. Expected: ${inputPrice}, Found: ${responsePrice}")
+}</scriptText>
+              </con:configuration>
+            </con:assertion>
+          </con:entry>
+          <con:entry>
+            <con:id>ca867d31-57ff-42d3-96bd-09d7d49ea5ed</con:id>
+            <con:isGroup>false</con:isGroup>
+            <con:sourceId>014967da-c191-4ee6-ab25-e607069e2f32</con:sourceId>
+            <con:propertyName>Response</con:propertyName>
+            <con:assertion type="GroovyScriptAssertion" name="CPU model" id="eac00680-9f4a-4d29-a9de-88d0f8ebce57">
+              <con:configuration>
+                <scriptText>// CPUmodel field
+def inputCPUmodel = context.expand('${#Test Case 2#CPU model}')
+
+def jsonResponse = new groovy.json.JsonSlurper().parseText(messageExchange.responseContent)
+def responseCPUmodel = jsonResponse.CPUmodel
+
+if (inputCPUmodel != responseCPUmodel) {
+    log.warn("Response CPUmodel is incorrect. Expected: ${inputCPUmodel}, Found: ${responseCPUmodel}")
+}</scriptText>
+              </con:configuration>
+            </con:assertion>
+          </con:entry>
+          <con:entry>
+            <con:id>09e39928-f2c9-406c-935e-db4764b4c369</con:id>
+            <con:isGroup>false</con:isGroup>
+            <con:sourceId>014967da-c191-4ee6-ab25-e607069e2f32</con:sourceId>
+            <con:propertyName>Response</con:propertyName>
+            <con:assertion type="GroovyScriptAssertion" name="Hard Disk Size" id="7ea7ab9c-6738-4701-8ebf-de01e74c0379">
+              <con:configuration>
+                <scriptText>// HardDiskSize field
+def inputHardDiskSize = context.expand('${#Test Case 2#Hard disk size}')
+
+def jsonResponse = new groovy.json.JsonSlurper().parseText(messageExchange.responseContent)
+def responseHardDiskSize = jsonResponse.data["Hard disk size"]
+
+if (inputHardDiskSize != responseHardDiskSize) {
+    log.warn("Response HardDiskSize is incorrect. Expected: ${inputHardDiskSize}, Found: ${responseHardDiskSize}")
+}</scriptText>
+              </con:configuration>
+            </con:assertion>
+          </con:entry>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:testCase id="890c2c78-d0ad-45ad-a019-d28b2ae27333" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Test Case 3" searchProperties="true" timeout="0">
+      <con:settings>
+        <con:setting id="com.smartbear.ready.history.view.ClientResultsView$OptionsForm@disable_log">false</con:setting>
+        <con:setting id="com.smartbear.ready.history.view.ClientResultsView$OptionsForm@errors_only">true</con:setting>
+        <con:setting id="com.smartbear.ready.history.view.ClientResultsView$OptionsForm@follow">false</con:setting>
+      </con:settings>
+      <con:testStep type="datasource" name="Data Source" id="00afcf8e-6215-4baa-8fa7-06fa173d05dc">
+        <con:settings/>
+        <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:dataSource type="Excel">
+            <con:configuration>
+              <file>C:/Users/gaura/Taruna/REST API/TestData.xlsx</file>
+              <worksheet>Sheet2</worksheet>
+              <cell>A2</cell>
+              <ignoreEmpty>false</ignoreEmpty>
+              <evaluateFormulas>false</evaluateFormulas>
+            </con:configuration>
+          </con:dataSource>
+          <con:shared>false</con:shared>
+          <con:restartShared>false</con:restartShared>
+          <con:property>record</con:property>
+          <con:property>id</con:property>
+          <con:property>name</con:property>
+          <con:property>data</con:property>
+          <con:property>color</con:property>
+          <con:property>capacity</con:property>
+          <con:property>capacity GB</con:property>
+          <con:property>price</con:property>
+          <con:property>generation</con:property>
+          <con:property>year</con:property>
+          <con:property>CPU model</con:property>
+          <con:property>Hard disk size</con:property>
+          <con:property>Strap Colour</con:property>
+          <con:property>Case Size</con:property>
+          <con:property>Color</con:property>
+          <con:property>Description</con:property>
+          <con:property>Capacity</con:property>
+          <con:property>Screen size</con:property>
+          <con:property>Generation</con:property>
+          <con:property>Price</con:property>
+          <con:restartOnRun>true</con:restartOnRun>
+          <con:stopDatasourceExhausted>false</con:stopDatasourceExhausted>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="REST Request" id="dacd2a40-dc36-4f60-a111-3bd8b6b67434">
+        <con:settings/>
+        <con:config service="https://api.restful-api.dev" resourcePath="/objects/ff808181932badb60193ee9acc3816df" methodName="Update" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="REST Request" id="75f6a197-1c26-400e-bbe2-2a4cc68a318e" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://api.restful-api.dev</con:endpoint>
+            <con:request>{\r
+   "id" : "${Data Source#id}",\r
+   "name" : "${Data Source#name}",\r
+   "createdAt" : "2024-12-22T11:04:43.909+00:00",\r
+   "data" : {\r
+      "year" : "${Data Source#year}",\r
+      "price" : "${Data Source#price}",\r
+      "CPU model" : "${Data Source#CPU model}",\r
+      "Hard disk size" : "${Data Source#Hard disk size}"\r
+   }\r
+}</con:request>
+            <con:originalUri>https://api.restful-api.dev/objects/ff808181932badb60193ee0a78851674</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="8ee0adb4-8af9-4c16-84ef-b1fa1ad0b35a" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters>
+              <con:entry key="color" value="${Data Source#Color}"/>
+              <con:entry key="year" value="${Data Source#year}"/>
+              <con:entry key="price" value="${Data Source#price}"/>
+              <con:entry key="CPU model" value="${Data Source#CPU model}"/>
+              <con:entry key="Hard disk size" value="${Data Source#Hard disk size}"/>
+              <con:entry key="name" value="${Data Source#name}"/>
+              <con:entry key="id" value="${Data Source#id}"/>
+              <con:entry key="Content-Type" value="application/json"/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>Content-Type</con:entry>
+              <con:entry>id</con:entry>
+              <con:entry>name</con:entry>
+              <con:entry>year</con:entry>
+              <con:entry>price</con:entry>
+              <con:entry>CPU model</con:entry>
+              <con:entry>Hard disk size</con:entry>
+              <con:entry>color</con:entry>
+            </con:parameterOrder>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="datasourceloop" name="Data Source Loop" id="f7fef9b5-9272-4b07-b5a0-e282b1775059">
+        <con:settings/>
+        <con:config>
+          <dataSourceStep>Data Source</dataSourceStep>
+          <targetStep>REST Request</targetStep>
+          <discardResults>true</discardResults>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:testCase id="95e4158a-0445-4624-b610-7178e35c3410" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Test Case 4" searchProperties="true" timeout="0">
+      <con:settings/>
+      <con:testStep type="restrequest" name="REST Request" id="0e1355e2-aa6e-4537-8a48-1595143f354d">
+        <con:settings/>
+        <con:config service="https://api.restful-api.dev" resourcePath="/objects/ff808181932badb60193ee9acc3816df" methodName="Get" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="REST Request" id="a74535f1-cfde-423b-9751-55252671fcc4" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://api.restful-api.dev</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://api.restful-api.dev/objects/ff808181932badb60193ee0a78851674</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="c4b625f6-3298-43fd-b1c7-7d08461d9d42" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="assertionteststep" name="Assertion" id="28ffc9df-a5c6-4a1c-aa72-ef6a92d53a50">
+        <con:settings/>
+        <con:config xsi:type="con:AssertionTestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:entry>
+            <con:id>c4695c6d-4361-4953-8ed9-a8ffffa04720</con:id>
+            <con:isGroup>false</con:isGroup>
+            <con:sourceId>0e1355e2-aa6e-4537-8a48-1595143f354d</con:sourceId>
+            <con:propertyName>Response</con:propertyName>
+            <con:assertion type="GroovyScriptAssertion" name="id" id="96846dba-c7c6-4098-9875-5d6159491a2c">
+              <con:configuration>
+                <scriptText>// Id field
+def inputId = context.expand('${#Test Case 4#id}')
+
+def jsonResponse = new groovy.json.JsonSlurper().parseText(messageExchange.responseContent)
+def responseId = jsonResponse.id
+
+if (inputId != responseId) {
+    log.warn("Response Id is incorrect. Expected: ${inputId}, Found: ${responseId}")
+}</scriptText>
+              </con:configuration>
+            </con:assertion>
+          </con:entry>
+          <con:entry>
+            <con:id>5148cd7b-a344-4e5b-aec2-52f99b064d9c</con:id>
+            <con:isGroup>false</con:isGroup>
+            <con:sourceId>0e1355e2-aa6e-4537-8a48-1595143f354d</con:sourceId>
+            <con:propertyName>Response</con:propertyName>
+            <con:assertion type="GroovyScriptAssertion" name="name" id="95f190b3-f385-46d0-88b9-faf5d309e8e4">
+              <con:configuration>
+                <scriptText>// name field
+def inputName = context.expand('${#Test Case 4#name}')
+
+def jsonResponse = new groovy.json.JsonSlurper().parseText(messageExchange.responseContent)
+def responseName = jsonResponse.name
+
+if (inputName != responseName) {
+    log.warn("Response name is incorrect. Expected: ${inputName}, Found: ${responseName}")
+}</scriptText>
+              </con:configuration>
+            </con:assertion>
+          </con:entry>
+          <con:entry>
+            <con:id>4b137e82-ec20-406f-adf2-e90fdf6d92dc</con:id>
+            <con:isGroup>false</con:isGroup>
+            <con:sourceId>0e1355e2-aa6e-4537-8a48-1595143f354d</con:sourceId>
+            <con:propertyName>Response</con:propertyName>
+            <con:assertion type="GroovyScriptAssertion" name="year" id="006374b4-f00c-4f76-8083-1b014f74f070">
+              <con:configuration>
+                <scriptText>// year field
+def inputYear = context.expand('${#Test Case 4#year}')
+
+def jsonResponse = new groovy.json.JsonSlurper().parseText(messageExchange.responseContent)
+def responseYear = jsonResponse.year
+
+if (inputYear != responseYear) {
+    log.warn("Response year is incorrect. Expected: ${inputYear}, Found: ${responseYear}")
+}</scriptText>
+              </con:configuration>
+            </con:assertion>
+          </con:entry>
+          <con:entry>
+            <con:id>028472fc-026e-4322-9892-c1d2793eea77</con:id>
+            <con:isGroup>false</con:isGroup>
+            <con:sourceId>0e1355e2-aa6e-4537-8a48-1595143f354d</con:sourceId>
+            <con:propertyName>Response</con:propertyName>
+            <con:assertion type="GroovyScriptAssertion" name="price" id="e38b9731-cd65-40e2-9034-a6c2d8706f74">
+              <con:configuration>
+                <scriptText>// price field
+def inputPrice = context.expand('${#Test Case 4#price}')
+
+def jsonResponse = new groovy.json.JsonSlurper().parseText(messageExchange.responseContent)
+def responsePrice = jsonResponse.price
+
+if (inputPrice != responsePrice) {
+    log.warn("Response name is incorrect. Expected: ${inputPrice}, Found: ${responsePrice}")
+}</scriptText>
+              </con:configuration>
+            </con:assertion>
+          </con:entry>
+          <con:entry>
+            <con:id>6bbcd373-4a24-4858-b398-e3b3c527fc2e</con:id>
+            <con:isGroup>false</con:isGroup>
+            <con:sourceId>0e1355e2-aa6e-4537-8a48-1595143f354d</con:sourceId>
+            <con:propertyName>Response</con:propertyName>
+            <con:assertion type="GroovyScriptAssertion" name="CPU model" id="8398deda-fe2a-4da0-9f7d-a8d130139fff">
+              <con:configuration>
+                <scriptText>// CPUmodel field
+def inputCPUmodel = context.expand('${#Test Case 4#CPU model}')
+
+def jsonResponse = new groovy.json.JsonSlurper().parseText(messageExchange.responseContent)
+def responseCPUmodel = jsonResponse.CPUmodel
+
+if (inputCPUmodel != responseCPUmodel) {
+    log.warn("Response CPUmodel is incorrect. Expected: ${inputCPUmodel}, Found: ${responseCPUmodel}")
+}</scriptText>
+              </con:configuration>
+            </con:assertion>
+          </con:entry>
+          <con:entry>
+            <con:id>7fe0f90a-0664-4e75-be44-83331dcd5d0e</con:id>
+            <con:isGroup>false</con:isGroup>
+            <con:sourceId>0e1355e2-aa6e-4537-8a48-1595143f354d</con:sourceId>
+            <con:propertyName>Response</con:propertyName>
+            <con:assertion type="GroovyScriptAssertion" name="Hard Disk Space" id="b7f816e1-904a-4b7d-b11b-183deacea551">
+              <con:configuration>
+                <scriptText>// HardDiskSize field
+def inputHardDiskSize = context.expand('${#Test Case 4#Hard disk size}')
+
+def jsonResponse = new groovy.json.JsonSlurper().parseText(messageExchange.responseContent)
+def responseHardDiskSize = jsonResponse.data["Hard disk size"]
+
+if (inputHardDiskSize != responseHardDiskSize) {
+    log.warn("Response HardDiskSize is incorrect. Expected: ${inputHardDiskSize}, Found: ${responseHardDiskSize}")
+}</scriptText>
+              </con:configuration>
+            </con:assertion>
+          </con:entry>
+          <con:entry>
+            <con:id>be575790-3878-450c-8df9-fd32c978ed25</con:id>
+            <con:isGroup>false</con:isGroup>
+            <con:sourceId>0e1355e2-aa6e-4537-8a48-1595143f354d</con:sourceId>
+            <con:propertyName>Response</con:propertyName>
+            <con:assertion type="GroovyScriptAssertion" name="color" id="e99b5a06-c3c7-4423-bcdc-16a235856310">
+              <con:configuration>
+                <scriptText>// Color field
+def inputColor = context.expand('${#Test Case 4#color}')
+
+def jsonResponse = new groovy.json.JsonSlurper().parseText(messageExchange.responseContent)
+def responseColor = jsonResponse.color
+
+if (inputColor != responseColor) {
+    log.warn("Response Color is incorrect. Expected: ${inputColor}, Found: ${responseColor}")
+}</scriptText>
+              </con:configuration>
+            </con:assertion>
+          </con:entry>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:testCase id="494763cf-cee0-4f67-be4f-7fe4ebba1426" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Test Case 5" searchProperties="true" timeout="0">
+      <con:settings/>
+      <con:testStep type="restrequest" name="REST Request" id="d69c13a6-0996-44cf-a770-612a9db46fc5">
+        <con:settings/>
+        <con:config service="https://api.restful-api.dev" resourcePath="/objects/ff808181932badb60193ee9acc3816df" methodName="Delete" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="REST Request" id="008d31e4-20c2-4395-9f18-9e02e75629a4" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://api.restful-api.dev</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://api.restful-api.dev/objects/ff808181932badb60193ee0a78851674</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="a0eeafb7-bd7c-4757-b351-d026ccbbb814" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="assertionteststep" name="Assertion" id="deb5a5f7-350a-47c5-ab8d-5c8cc2ba9062">
+        <con:settings/>
+        <con:config xsi:type="con:AssertionTestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:entry>
+            <con:id>4c804ce8-5b1b-4b0d-832d-969ae393a483</con:id>
+            <con:isGroup>false</con:isGroup>
+            <con:sourceId>d69c13a6-0996-44cf-a770-612a9db46fc5</con:sourceId>
+            <con:propertyName>Response</con:propertyName>
+            <con:assertion type="GroovyScriptAssertion" name="Deleted message" id="b3489f7e-5cc4-46cc-92f2-6c4a15c72b9b">
+              <con:configuration>
+                <scriptText>def jsonResponse = new groovy.json.JsonSlurper().parseText(messageExchange.responseContent)
+def expectedMessage = "has been deleted"
+if (jsonResponse.message?.contains(expectedMessage)) {
+    log.info("Object deleted successfully. Message: '${jsonResponse.message}'")
+} else {
+    def actualMessage = jsonResponse.message ?: "Message field not found in the response"
+    throw new AssertionError("Object not deleted: '${actualMessage}'")
+}
+</scriptText>
+              </con:configuration>
+            </con:assertion>
+          </con:entry>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:properties/>
+    <con:reportParameters/>
+  </con:testSuite>
+  <con:requirements/>
+  <con:properties/>
+  <con:wssContainer/>
+  <con:databaseConnectionContainer/>
+  <con:jmsConnectionContainer/>
+  <con:oAuth2ProfileContainer/>
+  <con:oAuth1ProfileContainer/>
+  <con:reporting>
+    <con:xmlTemplates/>
+    <con:parameters/>
+  </con:reporting>
+  <con:eventHandlers type="RequestFilter.filterRequest" name="RequestFilter.filterRequest">
+    <con:script>// Sample event script to add custom HTTP header to all outgoing REST, SOAP and HTTP(S) calls
+// This code is often used for adding custom authentication to ReadyAPI functional tests
+
+// If hardcoding the token, uncomment and change line 5
+// token = '4567'
+
+// If your token is parameterized in Project level custom property, uncomment line 8
+// token = request.parent.testCase.testSuite.project.getProperty('auth_token').getValue()
+
+// To modify all outgoing calls, remove comments from lines 11 to 16
+// headers = request.requestHeaders
+// if (headers.containsKey('auth_token2') == false) {
+//   headers.put('auth_token2', token)
+//   request.requestHeaders = headers
+// }</con:script>
+  </con:eventHandlers>
+  <con:eventHandlers type="TestRunListener.afterStep" name="TestRunListener.afterStep">
+    <con:script>// Save all test step results into files
+// Change the directory path in line 5 to a location where you want to store details
+// then uncomment lines 5 to 10
+
+// filePath = 'C:\\tempOutputDirectory\\'
+// fos = new java.io.FileOutputStream(filePath + testStepResult.testStep.label + '.txt', true)
+// pw = new java.io.PrintWriter(fos)
+// testStepResult.writeTo(pw)
+// pw.close()
+// fos.close()</con:script>
+  </con:eventHandlers>
+  <con:authRepository/>
+  <con:tags/>
+</con:soapui-project>
